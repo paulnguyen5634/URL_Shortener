@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
         <title>Odin Landing Page</title>
         <meta charset="utf-8">
     </head>
@@ -21,16 +21,16 @@
                     <h1 class="first-header">Cafe City</h1>
                     <p class="first-header-subtext">This website contains recipes for famous coffee drinks recognized around the world. 
                         Take a stroll in the fragrant abode of Cafe City!</p>
-                    <body>
-                        <h1 class="first-header">URL Shortener</h1>
-                        <form method="POST" action="{{url_for('index')}}">
-                            <input type="url" name ='long_url' placeholder="Enter the long URL" required>
-                            <button type="'Submit">Shorten</button>
-                        </form>
-                    </body>
+                    
+                    <h1 class="first-header">URL Shortener</h1>
+                    <form method="POST" action="{{url_for('index')}}">
+                        <input type="url" name ='long_url' placeholder="Enter the long URL" required>
+                        <button type="'Submit">Shorten</button>
+                    </form>
+                    
                 </div>
                 <div class = 'images-first'>
-                    <img src="images/intro_latte.jpg" alt="Image of latte">
+                    <img src="{{ url_for('static', filename='images/intro_latte.jpg') }}" alt="Image of latte">
                 </div>
             </div>
         </div>
@@ -38,19 +38,19 @@
             <h1 class="second-header">Cafe Selection</h1>
             <div class="images-second">
                 <div class="image-subtext">
-                    <img src="images/cappuccino.jpg">
+                    <img src="{{ url_for('static', filename='images/cappuccino.jpg') }}" alt="Image of latte">
                     <p>Classic Cappuccino</p>
                 </div>
                 <div class="image-subtext">
-                    <img src="images/espresso.jpg">
+                    <img src="{{ url_for('static', filename='images/espresso.jpg') }}" alt="Image of latte">                
                     <p>Rich Espresso</p>
                 </div>
                 <div class="image-subtext">
-                    <img src="images/machiatto.jpg">
+                    <img src="{{ url_for('static', filename='images/machiatto.jpg') }}" alt="Image of latte">                    
                     <p>Warm Machiatto</p>  
                 </div>
                 <div class="image-subtext">
-                    <img src="images/mocha.jpg">
+                    <img src="{{ url_for('static', filename='images/mocha.jpg') }}" alt="Image of latte">                    
                     <p>Molten Mocha</p>
                 </div>
             </div>
